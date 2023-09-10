@@ -8,7 +8,6 @@ export default function Hero() {
           </h1>
           <div className="detail text-[#5A5959] max-lg:mr-0 mr-[10rem] py-7">
             YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
-            SHOES.YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
             SHOES.
           </div>
           <div className="btns flex gap-10 font-[500] max-lg:justify-center">
