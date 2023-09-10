@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* animation */
+.animate-mover {
+  animation: mover 2800ms infinite linear;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,3 +1,4 @@
+import "../stylesheets/output.css";
 export default function Hero() {
   return (
     <main className="flex justify-center items-center min-h-screen pb-10 pt-[4.5rem] max-lg:pt-[3rem]">
@@ -28,7 +29,6 @@ export default function Hero() {
             <p>Also Available On</p>
             <div className="partner-logo flex items-center gap-4 pl-4">
               <a href="#">
-                {" "}
                 <img
                   src="images/flipkart.png"
                   width="32"
@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
         </div>
         <img
-          className="mx-auto"
+          className="mx-auto animate-mover"
           src="images/hero-image.png"
           width="530"
           height="487"

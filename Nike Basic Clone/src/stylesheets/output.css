@@ -697,6 +697,26 @@ video {
   transition-duration: 150ms;
 }
 
+/* animation */
+
+.animate-mover {
+  animation: mover 2800ms infinite linear;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .hover\:text-red-600:hover {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
