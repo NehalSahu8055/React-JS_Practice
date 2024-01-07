@@ -15,6 +15,7 @@ import RootLayout from "./layout/RootLayout";
 import Home from "./pages/Home.jsx";
 import Cart from "./pages/Cart.jsx";
 import AddAddress from "./pages/AddAddress.jsx";
+import AddressOrder from "./components/checkout/AddressOrder.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/cart/add-address" element={<AddAddress />} />
+      <Route path="/checkout" element={<AddressOrder />} />
     </Route>,
   ),
 );

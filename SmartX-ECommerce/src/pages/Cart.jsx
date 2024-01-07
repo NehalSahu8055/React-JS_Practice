@@ -59,58 +59,26 @@ function Cart() {
           <span>Oops! Empty Cart. Add Some Items</span>
         </div>
       )}
-      <div className="address-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">
-          Select a delivery address
-        </h3>
-        <div className="select-address mb-10">
-          <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
-            <label className=" flex items-center gap-2 text-slate-800">
-              <input type="radio" name="addressSelect" />
-              <span className="font-bold">Nehal Sahu</span>
-              <span className="text-sm">
-                Address ward no 1, g. t. road Ajuha kaushambi, AJHUWA, UTTAR
-                PRADESH, 212217, India
-              </span>
-            </label>
-          </div>
 
-          <button className="add-address-btn hover:text-purple group flex cursor-pointer  items-center gap-1 px-4 text-sm text-slate-700">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-            >
-              <path
-                className="group-hover:fill-purple transition"
-                fill="#888888"
-                d="M11 13v3q0 .425.288.713T12 17q.425 0 .713-.288T13 16v-3h3q.425 0 .713-.288T17 12q0-.425-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8v3H8q-.425 0-.712.288T7 12q0 .425.288.713T8 13zm-6 8q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z"
-              />
-            </svg>
-            <span>Add Address</span>
-          </button>
-        </div>
-        <hr className="mb-4 border-gray-300" />
-        <div className="subtotal-wrap">
-          <span>
-            Subtotal ({cart.length}):{" "}
-            <span className="subtotal">
-              ₹
-              {cart && Array.isArray(cart)
-                ? cart.reduce((acc, product) => acc + product.price, 0)
-                : 0}
-            </span>
+      <hr className="mb-4 border-gray-300" />
+      <div className="subtotal-wrap">
+        <span>
+          Subtotal ({cart.length}):{" "}
+          <span className="subtotal">
+            ₹
+            {cart && Array.isArray(cart)
+              ? cart.reduce((acc, product) => acc + product.price, 0)
+              : 0}
           </span>
-          <button
-            className="proceed-btn"
-            onClick={() => {
-              // dispatch(addToCart({ images, title, price, rating }))
-            }}
-          >
-            Proceed To Buy
-          </button>
-        </div>
+        </span>
+        <button
+          className="proceed-btn"
+          onClick={() => {
+            // dispatch(addToCart({ images, title, price, rating }))
+          }}
+        >
+          Proceed To Buy
+        </button>
       </div>
     </main>
   );
