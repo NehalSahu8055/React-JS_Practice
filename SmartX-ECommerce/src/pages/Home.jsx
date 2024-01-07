@@ -4,12 +4,11 @@ import useFetch from '../hooks/useFetch';
 import { fetchData } from '../features/productSlice';
 import { nanoid } from '@reduxjs/toolkit';
 import { addToCart } from '../features/cartSlice';
-import Toast from '../components/aux-components/Toast';
 
 function Home() {
     const dispatch = useDispatch();
     const cart = useSelector(state => state.cart);
-    const [isAddedToCart, setisAddedToCart] = useState(false)
+    const [isAddedToCart, setisAddedToCart] = useState()
     // const data = useSelector(state => state.products);
     const API = 'https://dummyjson.com/products/';
     const { data } = useFetch(API);
@@ -24,7 +23,6 @@ function Home() {
 
     return (
         <main>
-            {isAddedToCart && <Toast />}
             <div className='cards'>
                 {
                     data
