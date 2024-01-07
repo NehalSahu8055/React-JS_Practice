@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 export default function AddressOrder() {
   const dispatch = useDispatch();
@@ -13,16 +14,18 @@ export default function AddressOrder() {
           Select a delivery address
         </h3>
         <div className="select-address mb-10">
-          <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
-            <div className=" flex items-center gap-2 text-slate-800">
-              <input type="radio" name="addressSelect" />
-              <span className="font-bold">Nehal Sahu</span>
-              <span className="text-sm">
-                Address ward no 1, g. t. road Ajuha kaushambi, AJHUWA, UTTAR
-                PRADESH, 212217, India
-              </span>
+          <label>
+            <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
+              <div className=" flex items-center gap-2 text-slate-800">
+                <input type="radio" name="addressSelect" />
+                <span className="font-bold">Nehal Sahu</span>
+                <span className="text-sm">
+                  Address ward no 1, g. t. road Ajuha kaushambi, AJHUWA, UTTAR
+                  PRADESH, 212217, India
+                </span>
+              </div>
             </div>
-          </div>
+          </label>
 
           <button className="add-address-btn hover:text-purple group flex cursor-pointer  items-center gap-1 px-4 text-sm text-slate-700">
             <svg
@@ -96,14 +99,15 @@ export default function AddressOrder() {
               : 0}
           </span>
         </span>
-        <button
+        <NavLink
+          to="/checkout/order-confirmed"
           className="proceed-btn"
           onClick={() => {
             // dispatch(addToCart({ images, title, price, rating }))
           }}
         >
           Place Order
-        </button>
+        </NavLink>
       </div>
     </main>
   );

@@ -4,6 +4,7 @@ import useFetch from "../hooks/useFetch";
 import { fetchData } from "../features/productSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import { addToCart } from "../features/cartSlice";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   const dispatch = useDispatch();
@@ -58,6 +59,31 @@ function Home() {
           </div>
         )}
       </div>
+
+      {data && (
+        <>
+          <NavLink
+            to="/cart"
+            className="bg-purple text-md mx-auto mt-10 w-fit rounded-md p-2.5 px-10 font-bold uppercase text-white hover:opacity-85"
+            onClick={() => {
+              dispatch(addToCart({ id, images, title, price, rating }));
+              setisAddedToCart(true);
+            }}
+          >
+            Go To Cart
+          </NavLink>
+          <button
+            onClick={() => {
+              document
+                .querySelector("main")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            className="fixed bottom-4 right-4 h-10 w-10 rounded-full bg-white text-2xl shadow-md"
+          >
+            🔝
+          </button>
+        </>
+      )}
     </main>
   );
 }

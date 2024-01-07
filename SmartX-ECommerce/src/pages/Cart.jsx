@@ -2,6 +2,7 @@ import { nanoid } from "@reduxjs/toolkit";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "../features/cartSlice";
+import { NavLink } from "react-router-dom";
 
 function Cart() {
   const dispatch = useDispatch();
@@ -71,14 +72,15 @@ function Cart() {
               : 0}
           </span>
         </span>
-        <button
+        <NavLink
+          to="/checkout"
           className="proceed-btn"
           onClick={() => {
             // dispatch(addToCart({ images, title, price, rating }))
           }}
         >
           Proceed To Buy
-        </button>
+        </NavLink>
       </div>
     </main>
   );
