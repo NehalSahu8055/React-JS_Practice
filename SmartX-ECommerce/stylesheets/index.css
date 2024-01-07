@@ -1,7 +1,7 @@
 /* index.css */
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   min-height: 100vh;
   background-color: rgba(130, 170, 238, 0.227);
 }
@@ -104,12 +104,6 @@ h1 {
 img {
   max-width: 100%;
 }
-
-hr {
-  margin: 1rem 0;
-  border-color: rgb(239, 225, 216);
-  border-top: 0;
-}
 .about {
   display: flex;
   justify-content: space-between;
@@ -192,7 +186,8 @@ footer {
 @keyframes mulShdSpin {
   0%,
   100% {
-    box-shadow: 0em -2.6em 0em 0em blue,
+    box-shadow:
+      0em -2.6em 0em 0em blue,
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
       2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
@@ -202,8 +197,10 @@ footer {
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
   }
   12.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
-      1.8em -1.8em 0 0em blue, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.7),
+      1.8em -1.8em 0 0em blue,
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -211,8 +208,10 @@ footer {
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
   }
   25% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
-      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em blue,
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7),
+      2.5em 0em 0 0em blue,
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
@@ -220,49 +219,59 @@ footer {
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
   37.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
-      2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em blue,
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.7),
+      1.75em 1.75em 0 0em blue,
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
   50% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
       2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
-      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em blue,
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7),
+      0em 2.5em 0 0em blue,
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
   62.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
       2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
-      0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em blue,
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.7),
+      -1.8em 1.8em 0 0em blue,
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
   75% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
       2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
       0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
-      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em blue,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7),
+      -2.6em 0em 0 0em blue,
       -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
   }
   87.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
+    box-shadow:
+      0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
       1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
       2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em blue;
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.7),
+      -1.8em -1.8em 0 0em blue;
   }
 }
 
@@ -333,8 +342,12 @@ footer {
 
 .toast.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  -webkit-animation:
+    fadein 0.5s,
+    fadeout 0.5s 2.5s;
+  animation:
+    fadein 0.5s,
+    fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
