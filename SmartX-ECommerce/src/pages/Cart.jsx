@@ -9,7 +9,7 @@ function Cart() {
 
   return (
     <main class="justify-evenly">
-      <h2 className="mb-3 text-2xl font-bold text-slate-800">Shopping Cart</h2>
+      <h2 className="mb-10 text-2xl font-bold text-slate-800">Shopping Cart</h2>
       {cart.length ? (
         <div className="grid grid-cols-2 gap-1 tab:grid-cols-7 laptop:grid-cols-8">
           {cart.map((product) => {
@@ -59,7 +59,7 @@ function Cart() {
           <span>Oops! Empty Cart. Add Some Items</span>
         </div>
       )}
-      <div className="address-wrap ">
+      <div className="address-wrap mt-2">
         <h3 className="py-3 text-lg text-slate-800">
           Select a delivery address
         </h3>
@@ -74,17 +74,8 @@ function Cart() {
               </span>
             </label>
           </div>
-          <div className="border-purple/40 bg-purple/10 flex rounded-md border px-4  py-2">
-            <label className=" flex items-center gap-2 text-slate-800">
-              <input type="radio" name="addressSelect" />
-              <span className="font-bold">Nehal Sahu</span>
-              <span className="mb-4 text-sm">
-                Address ward no 1, g. t. road Ajuha kaushambi, AJHUWA, UTTAR
-                PRADESH, 212217, India
-              </span>
-            </label>
-          </div>
-          <button className="add-address-btn hover:text-purple group flex cursor-pointer  items-center gap-1 px-4 pt-2 text-sm text-slate-700">
+
+          <button className="add-address-btn hover:text-purple group flex cursor-pointer  items-center gap-1 px-4 text-sm text-slate-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
