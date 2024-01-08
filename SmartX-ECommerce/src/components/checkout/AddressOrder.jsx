@@ -10,12 +10,12 @@ export default function AddressOrder() {
     <main>
       {/* Address  */}
       <div className="address-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">
+        <h3 className="py-3 text-xl font-bold text-slate-800">
           Select a delivery address
         </h3>
         <div className="select-address mb-10">
           <label>
-            <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
+            <div className="mb-2 flex rounded-md border border-purple/40 bg-purple/10 px-4  py-2">
               <div className=" flex items-center gap-2 text-slate-800">
                 <input type="radio" name="addressSelect" />
                 <span className="font-bold">Nehal Sahu</span>
@@ -27,7 +27,7 @@ export default function AddressOrder() {
             </div>
           </label>
 
-          <button className="add-address-btn hover:text-purple group flex cursor-pointer  items-center gap-1 px-4 text-sm text-slate-700">
+          <button className="add-address-btn group flex cursor-pointer items-center  gap-1 px-4 text-sm text-slate-700 hover:text-purple">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -35,7 +35,7 @@ export default function AddressOrder() {
               viewBox="0 0 24 24"
             >
               <path
-                className="group-hover:fill-purple transition"
+                className="transition group-hover:fill-purple"
                 fill="#888888"
                 d="M11 13v3q0 .425.288.713T12 17q.425 0 .713-.288T13 16v-3h3q.425 0 .713-.288T17 12q0-.425-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8v3H8q-.425 0-.712.288T7 12q0 .425.288.713T8 13zm-6 8q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z"
               />
@@ -47,10 +47,12 @@ export default function AddressOrder() {
 
       {/* Payment */}
       <div className="payment-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">Payment Method</h3>
+        <h3 className="py-3 text-xl font-bold text-slate-800">
+          Payment Method
+        </h3>
         <div className="select-address mb-10">
           <label>
-            <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
+            <div className="mb-2 flex rounded-md border border-purple/40 bg-purple/10 px-4  py-2">
               <div className=" flex items-center gap-2 text-slate-800">
                 <input type="radio" name="paymentSelect" />
                 <span className="text-sm">UPI</span>
@@ -58,7 +60,7 @@ export default function AddressOrder() {
             </div>
           </label>
           <label>
-            <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
+            <div className="mb-2 flex rounded-md border border-purple/40 bg-purple/10 px-4  py-2">
               <div className=" flex items-center gap-2 text-slate-800">
                 <input type="radio" name="paymentSelect" />
                 <span className="text-sm">Net banking</span>
@@ -66,7 +68,7 @@ export default function AddressOrder() {
             </div>
           </label>
           <label>
-            <div className="border-purple/40 bg-purple/10 mb-2 flex rounded-md border px-4  py-2">
+            <div className="mb-2 flex rounded-md border border-purple/40 bg-purple/10 px-4  py-2">
               <div className=" flex items-center gap-2 text-slate-800">
                 <input type="radio" name="paymentSelect" />
                 <span className="text-sm">
@@ -80,7 +82,7 @@ export default function AddressOrder() {
 
       {/*Place Order */}
       <div className="place-order-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">Order Summary</h3>
+        <h3 className="py-3 text-xl font-bold text-slate-800">Order Summary</h3>
         <span>
           Subtotal ({cart.length}) ₹
           {cart && Array.isArray(cart)
@@ -99,13 +101,7 @@ export default function AddressOrder() {
               : 0}
           </span>
         </span>
-        <NavLink
-          to="/checkout/order-confirmed"
-          className="proceed-btn"
-          onClick={() => {
-            // dispatch(addToCart({ images, title, price, rating }))
-          }}
-        >
+        <NavLink to="/checkout/order-confirmed" className="proceed-btn">
           Place Order
         </NavLink>
       </div>
