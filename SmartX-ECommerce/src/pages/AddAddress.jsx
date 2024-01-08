@@ -1,10 +1,12 @@
-import React from 'react'
-import AddressForm from "../components/forms/AddressForm/AddressForm"
+import React from "react";
+import AddressForm from "../components/forms/AddressForm/AddressForm";
 
 function AddAddress() {
-    return (
-        <AddressForm />
-    )
+  return (
+    <div>
+      <AddressForm />
+    </div>
+  );
 }
 
-export default AddAddress
+export default AddAddress;
