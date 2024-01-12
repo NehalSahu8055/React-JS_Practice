@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Input, formOutput } from "../component/Input";
-
+import { Input } from "../component/Input";
+import Validation from "../component/validation";
 function AddressForm() {
   // initial State of the formData
   const formData = {
@@ -14,7 +14,69 @@ function AddressForm() {
     State: "",
   };
   const [initialState, setInitialState] = useState(formData);
+  const [error, setError] = useState({});
   // The formOutput holds individual data of the formData
+  const formOutput = [
+    {
+      id: 1,
+      label: "Full Name [first and lastname]",
+      name: "Fullname",
+      type: "text",
+      placeholder: "john Doe",
+      minLength: 6,
+      required: true,
+    },
+    {
+      id: 2,
+      label: "Mobile Number",
+      name: "Mobile",
+      type: "tel",
+      placeholder: "mobile",
+      error: "",
+      required: true,
+    },
+    {
+      id: 3,
+      label: "Pincode",
+      name: "Pincode",
+      type: "text",
+      placeholder: "6 digit [0-9] PIN code",
+      maxLength: 6,
+      required: true,
+    },
+    {
+      id: 4,
+      label: "Address",
+      name: "Address",
+      type: "text",
+      placeholder: "Address",
+      required: true,
+    },
+    {
+      id: 5,
+      label: "Section,Area,Street,Village",
+      name: "Section",
+      type: "text",
+      placeholder: "Section",
+      required: true,
+    },
+    {
+      id: 6,
+      label: "Landmark",
+      name: "Landmark",
+      type: "text",
+      placeholder: "eg. near university hospital",
+      required: true,
+    },
+    {
+      id: 7,
+      label: "Town/City",
+      name: "Town",
+      type: "text",
+      placeholder: "Town",
+      required: true,
+    },
+  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +86,10 @@ function AddressForm() {
         [name]: value,
       };
     });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(Validation(initialState));
   };
 
   return (
@@ -38,6 +104,12 @@ function AddressForm() {
             onChange={handleChange}
           />
         ))}
+        <button
+          onClick={handleSubmit}
+          className="m-1 rounded border border-green-800 p-2 text-green-500 shadow-lg hover:bg-green-500 hover:text-slate-50"
+        >
+          submit
+        </button>
       </form>
     </div>
   );
