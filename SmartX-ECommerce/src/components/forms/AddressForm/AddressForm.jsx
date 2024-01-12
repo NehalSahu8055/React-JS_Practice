@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "../component/Input";
+import { Input, formOutput } from "../component/Input";
 
 function AddressForm() {
   // initial State of the formData
@@ -15,23 +15,7 @@ function AddressForm() {
   };
   const [initialState, setInitialState] = useState(formData);
   // The formOutput holds individual data of the formData
-  const formOutput = [
-    {
-      id: 1,
-      label: "Full Name [first and lastname]",
-      name: "fullname",
-      type: "text",
-      placeholder: "john Doe",
-    },
-    {
-      id: 2,
-      label: "Mobile Number",
-      name: "Mobile",
-      type: "tel",
-      placeholder: "mobile",
-      error: "may be helpful during delivery",
-    },
-  ];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInitialState((prev) => {
@@ -43,7 +27,7 @@ function AddressForm() {
   };
 
   return (
-    <div className="size-[80vw] translate-y-[4rem]">
+    <div className=" mx-auto bg-slate-100 px-2 pt-[4rem]">
       <h2 className="text-xl text-gray-700 ">Enter the New Delivery address</h2>
       <form>
         {formOutput.map((output) => (
