@@ -9,7 +9,7 @@ function Cart() {
   const cart = useSelector((state) => state.cart);
 
   return (
-    <main class="justify-evenly">
+    <main className="justify-evenly">
       <h2 className="mb-10 text-2xl font-bold text-slate-800">Shopping Cart</h2>
       {cart.length ? (
         <div className="grid grid-cols-2 gap-1 tab:grid-cols-7 laptop:grid-cols-8">
@@ -53,8 +53,8 @@ function Cart() {
         <div className="msg-empty-cart">
           <img
             className="img-empty-cart"
-            src="https://media.giphy.com/media/8PA8Ew3nw97yg/giphy.gif"
-            width="300"
+            src="empty-cart.svg"
+            width="200"
             alt=""
           />
           <span>Oops! Empty Cart. Add Some Items</span>

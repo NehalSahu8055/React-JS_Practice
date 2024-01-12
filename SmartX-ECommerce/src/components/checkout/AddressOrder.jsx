@@ -10,7 +10,7 @@ export default function AddressOrder() {
     <main>
       {/* Address  */}
       <div className="address-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">
+        <h3 className="py-3 text-xl font-bold text-slate-800">
           Select a delivery address
         </h3>
         <div className="select-address mb-10">
@@ -47,7 +47,9 @@ export default function AddressOrder() {
 
       {/* Payment */}
       <div className="payment-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">Payment Method</h3>
+        <h3 className="py-3 text-xl font-bold text-slate-800">
+          Payment Method
+        </h3>
         <div className="select-address mb-10">
           <label>
             <div className="mb-2 flex rounded-md border border-purple/40 bg-purple/10 px-4  py-2">
@@ -80,7 +82,7 @@ export default function AddressOrder() {
 
       {/*Place Order */}
       <div className="place-order-wrap mt-2">
-        <h3 className="py-3 text-lg text-slate-800">Order Summary</h3>
+        <h3 className="py-3 text-xl font-bold text-slate-800">Order Summary</h3>
         <span>
           Subtotal ({cart.length}) ₹
           {cart && Array.isArray(cart)
@@ -99,13 +101,7 @@ export default function AddressOrder() {
               : 0}
           </span>
         </span>
-        <NavLink
-          to="/checkout/order-confirmed"
-          className="proceed-btn"
-          onClick={() => {
-            // dispatch(addToCart({ images, title, price, rating }))
-          }}
-        >
+        <NavLink to="/checkout/order-confirmed" className="proceed-btn">
           Place Order
         </NavLink>
       </div>
