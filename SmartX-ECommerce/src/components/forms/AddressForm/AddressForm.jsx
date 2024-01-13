@@ -23,17 +23,17 @@ function AddressForm() {
       name: "Fullname",
       type: "text",
       placeholder: "john Doe",
-      minLength: 6,
       required: true,
+      error: `fullname is required`,
     },
     {
       id: 2,
       label: "Mobile Number",
       name: "Mobile",
       type: "tel",
-      placeholder: "mobile",
-      error: "",
+      placeholder: "mobile number",
       required: true,
+      error: `telphone number is required`,
     },
     {
       id: 3,
@@ -41,8 +41,8 @@ function AddressForm() {
       name: "Pincode",
       type: "text",
       placeholder: "6 digit [0-9] PIN code",
-      maxLength: 6,
       required: true,
+      error: `pincode is required`,
     },
     {
       id: 4,
@@ -51,6 +51,7 @@ function AddressForm() {
       type: "text",
       placeholder: "Address",
       required: true,
+      error: `Address is required `,
     },
     {
       id: 5,
@@ -59,6 +60,7 @@ function AddressForm() {
       type: "text",
       placeholder: "Section",
       required: true,
+      error: `section is requried`,
     },
     {
       id: 6,
@@ -67,6 +69,7 @@ function AddressForm() {
       type: "text",
       placeholder: "eg. near university hospital",
       required: true,
+      error: `Landmark is required`,
     },
     {
       id: 7,
@@ -75,6 +78,7 @@ function AddressForm() {
       type: "text",
       placeholder: "Town",
       required: true,
+      error: `Town is required`,
     },
   ];
 
@@ -100,7 +104,7 @@ function AddressForm() {
           <Input
             key={output.id}
             {...output}
-            value={initialState[formData.name]}
+            value={initialState[output.name]}
             onChange={handleChange}
           />
         ))}
