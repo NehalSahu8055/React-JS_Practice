@@ -97,7 +97,7 @@ function AddressForm() {
   };
 
   return (
-    <div className=" mx-auto bg-slate-100 px-2 pt-[4rem]">
+    <div className=" mx-auto max-w-[600px] bg-slate-100 px-2 pt-[4rem]">
       <h2 className="text-xl text-gray-700 ">Enter the New Delivery address</h2>
       <form>
         {formOutput.map((output) => (
