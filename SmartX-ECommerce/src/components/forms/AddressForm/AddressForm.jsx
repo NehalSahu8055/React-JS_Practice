@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "../component/Input";
 import Validation from "../component/validation";
 function AddressForm() {
@@ -14,7 +14,7 @@ function AddressForm() {
     State: "",
   };
   const [initialState, setInitialState] = useState(formData);
-  const [error, setError] = useState({});
+  const [errors, setErrors] = useState({});
   // The formOutput holds individual data of the formData
   const formOutput = [
     {
@@ -24,7 +24,7 @@ function AddressForm() {
       type: "text",
       placeholder: "john Doe",
       required: true,
-      error: `fullname is required`,
+      errors: errors.Fullname,
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ function AddressForm() {
       type: "tel",
       placeholder: "mobile number",
       required: true,
-      error: `telphone number is required`,
+      errors: errors.Mobile,
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ function AddressForm() {
       type: "text",
       placeholder: "6 digit [0-9] PIN code",
       required: true,
-      error: `pincode is required`,
+      errors: errors.Pincode,
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ function AddressForm() {
       type: "text",
       placeholder: "Address",
       required: true,
-      error: `Address is required `,
+      errors: errors.Address,
     },
     {
       id: 5,
@@ -60,7 +60,7 @@ function AddressForm() {
       type: "text",
       placeholder: "Section",
       required: true,
-      error: `section is requried`,
+      errors: errors.Section,
     },
     {
       id: 6,
@@ -69,7 +69,7 @@ function AddressForm() {
       type: "text",
       placeholder: "eg. near university hospital",
       required: true,
-      error: `Landmark is required`,
+      errors: errors.Landmark,
     },
     {
       id: 7,
@@ -78,7 +78,7 @@ function AddressForm() {
       type: "text",
       placeholder: "Town",
       required: true,
-      error: `Town is required`,
+      errors: errors.Town,
     },
   ];
 
@@ -91,10 +91,14 @@ function AddressForm() {
       };
     });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError(Validation(initialState));
-  };
+  useEffect(() => {
+    function handleSubmit(e){
+      e.preventDefault();
+      const validationError = Validation(initialState);
+      setErrors(validationError);
+    };
+    handleSubmit();
+  }, []);
 
   return (
     <div className=" mx-auto max-w-[600px] bg-slate-100 px-2 pt-[4rem]">
