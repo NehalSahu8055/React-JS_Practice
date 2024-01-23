@@ -1,8 +1,19 @@
-# React + Vite
+# SmartX Ecommerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🔗 Links
 
-Currently, two official plugins are available:
+- Solution URL: [Click here](https://github.com/NehalSahu8055/React-JS_Practice/tree/master/SmartX-ECommerce)
+- Live Site URL: [Click here](https://smartx-ecommerce-nehal.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛠️ Built with
+
+- Semantic HTML5 markup
+- Tailwind CSS
+- React JS
+- React Router
+- Redux Toolkit
+
+## ✒️Author
+
+- <p style="color:skyblue">Nehal Sahu</p>
+- Frontend Mentor - [@NehalSahu8055](https://www.frontendmentor.io/profile/NehalSahu8055)
