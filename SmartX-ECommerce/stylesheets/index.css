@@ -393,5 +393,36 @@ footer {
     opacity: 0;
   }
 }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
 
-/* Forms CSS @Warmath*/
+::-webkit-scrollbar-track {
+  border: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0b8b8a8;
+  border-radius: 1.25rem;
+  border: 0.1875rem solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: #c0b8b8a8;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(192, 184, 184, 0.66) transparent;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #c0b8b8cb;
+}

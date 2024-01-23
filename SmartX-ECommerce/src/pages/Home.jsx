@@ -30,7 +30,7 @@ function Home() {
 
             return (
               <article key={nanoid() + id} className="card ">
-                <div>
+                <div className="h-[10rem] overflow-hidden">
                   <img src={thumbnail} alt={title} width="200" />
                 </div>{" "}
                 <div className="detail">
