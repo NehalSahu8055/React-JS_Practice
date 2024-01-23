@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 import { fetchData } from "../features/productSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import { addToCart } from "../features/cartSlice";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   const dispatch = useDispatch();
@@ -64,16 +64,12 @@ function Home() {
 
       {data && (
         <>
-          <NavLink
+          <Link
             to="/cart"
             className="text-md mx-auto mt-10 w-fit rounded-md bg-purple p-2.5 px-10 font-bold uppercase text-white hover:opacity-85"
-            onClick={() => {
-              dispatch(addToCart({ id, images, title, price, rating }));
-              setisAddedToCart(true);
-            }}
           >
             Go To Cart
-          </NavLink>
+          </Link>
           <button
             onClick={() => {
               document
