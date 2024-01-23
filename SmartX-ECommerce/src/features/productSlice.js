@@ -1,20 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [
     {
-      id: '',
-      image: '',
-      title: '',
-      price: '',
-      rating: '',
-      count: '',
+      id: "",
+      thumbnail: "",
+      title: "",
+      price: "",
+      rating: "",
+      count: "",
     },
   ],
 };
 
 export const productSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {
     fetchData: (state, action) => {

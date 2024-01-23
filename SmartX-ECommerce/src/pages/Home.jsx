@@ -43,7 +43,9 @@ function Home() {
                   <button
                     className="add-to-cart-btn"
                     onClick={() => {
-                      dispatch(addToCart({ id, images, title, price, rating }));
+                      dispatch(
+                        addToCart({ id, thumbnail, title, price, rating }),
+                      );
                       setisAddedToCart(true);
                     }}
                   >

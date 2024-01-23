@@ -14,12 +14,12 @@ function Cart() {
       {cart.length ? (
         <div className="grid grid-cols-2 gap-1 tab:grid-cols-7 laptop:grid-cols-8">
           {cart.map((product) => {
-            const { id, image, title, price } = product || {};
+            const { id, thumbnail, title, price } = product || {};
 
             return (
               <article key={nanoid() + id} className="card cartCard">
                 <div>
-                  <img src={image[0]} alt={title} width="200" />
+                  <img src={thumbnail} alt={title} width="200" />
                 </div>
                 <div className="detail">
                   <h1 className="px-2 text-sm font-bold">{title}</h1>

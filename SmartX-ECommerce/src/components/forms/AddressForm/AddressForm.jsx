@@ -91,17 +91,14 @@ function AddressForm() {
       };
     });
   };
-  useEffect(() => {
-    function handleSubmit(e){
-      e.preventDefault();
-      const validationError = Validation(initialState);
-      setErrors(validationError);
-    };
-    handleSubmit();
-  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationError = Validation(initialState);
+    setErrors(validationError);
+  };
 
   return (
-    <div className=" mx-auto max-w-[600px] bg-slate-100 px-2 pt-[4rem]">
+    <div className=" mx-auto mb-10 mt-[6.5rem] max-w-[600px]  rounded-lg bg-slate-100 p-4">
       <h2 className="text-xl text-gray-700 ">Enter the New Delivery address</h2>
       <form>
         {formOutput.map((output) => (
@@ -114,9 +111,9 @@ function AddressForm() {
         ))}
         <button
           onClick={handleSubmit}
-          className="m-1 rounded border border-green-800 p-2 text-green-500 shadow-lg hover:bg-green-500 hover:text-slate-50"
+          className="m-1 rounded border border-green-800 p-2 text-green-500 shadow-lg transition hover:border-transparent hover:bg-green-500 hover:text-slate-50"
         >
-          submit
+          Submit
         </button>
       </form>
     </div>

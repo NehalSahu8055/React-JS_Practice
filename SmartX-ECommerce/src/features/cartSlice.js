@@ -18,11 +18,11 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const { id, images, title, price, rating } = action.payload;
+      const { id, thumbnail, title, price, rating } = action.payload;
 
       const product = {
         id: id,
-        image: images,
+        thumbnail: thumbnail,
         title: title,
         price: price,
         rating: rating,

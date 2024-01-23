@@ -7,9 +7,9 @@ export const Input = (props) => {
         {...allProps}
         value={value}
         onChange={onChange}
-        className="placeholder:text-100-gray h-[3rem] text-wrap rounded border-0 p-1 text-lg text-slate-500 outline-0"
+        className="placeholder:text-100-gray h-[3rem] text-wrap rounded border-0 p-1 px-3 text-lg text-slate-500 outline-0"
       />
-      {errors && 
+      {errors && (
         <span
           style={{
             color: "red",
@@ -20,7 +20,7 @@ export const Input = (props) => {
         >
           {errors}
         </span>
-      }
+      )}
     </fieldset>
   );
 };
