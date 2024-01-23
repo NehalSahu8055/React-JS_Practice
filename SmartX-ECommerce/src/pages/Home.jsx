@@ -26,12 +26,12 @@ function Home() {
       <div className="cards">
         {data ? (
           data.products.map((product) => {
-            const { id, images, title, price, rating } = product || {};
+            const { id, thumbnail, title, price, rating } = product || {};
 
             return (
-              <article key={nanoid() + id} className="card">
+              <article key={nanoid() + id} className="card ">
                 <div>
-                  <img src={images[0]} alt={title} width="200" />
+                  <img src={thumbnail} alt={title} width="200" />
                 </div>{" "}
                 <div className="detail">
                   <h1 className="text-md px-2 pt-4 font-bold">{title}</h1>
@@ -64,7 +64,7 @@ function Home() {
         <>
           <NavLink
             to="/cart"
-            className="bg-purple text-md mx-auto mt-10 w-fit rounded-md p-2.5 px-10 font-bold uppercase text-white hover:opacity-85"
+            className="text-md mx-auto mt-10 w-fit rounded-md bg-purple p-2.5 px-10 font-bold uppercase text-white hover:opacity-85"
             onClick={() => {
               dispatch(addToCart({ id, images, title, price, rating }));
               setisAddedToCart(true);
